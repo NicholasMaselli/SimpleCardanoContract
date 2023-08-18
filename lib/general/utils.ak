@@ -1,4 +1,5 @@
 
+use aiken/list
 use aiken/transaction.{Transaction, InlineDatum}
 use aiken/transaction/value.{Value}
 use aiken/transaction/credential.{Address}
