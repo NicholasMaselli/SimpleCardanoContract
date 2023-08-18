@@ -1,9 +1,13 @@
-/// Custom type
+use aiken/transaction/credential.{Address}
+
 pub type Datum {
-  /// A utf8 encoded message
-  message: ByteArray,
+  fee_address: Address,
 }
 
 test sum() {
   1 + 1 == 2
+}
+
+test multiply() {
+  5 * 6 == 30
 }

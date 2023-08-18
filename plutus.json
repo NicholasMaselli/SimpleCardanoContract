@@ -1,0 +1,55 @@
+{
+  "preamble": {
+    "title": "simple/simple",
+    "description": "Aiken contracts for project 'simple/simple'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "always_succeed.always_succeed",
+      "datum": {
+        "title": "_datum",
+        "schema": {
+          "$ref": "#/definitions/simple~1types~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "500100003222253330044a22930b2b9a01",
+      "hash": "90592520b329fe08f0e93946ecd405e49b7480795e27cb618f002d88"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "simple/types/Datum": {
+      "title": "Datum",
+      "description": "Custom type",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "message",
+              "description": "A utf8 encoded message",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
